@@ -6,7 +6,7 @@ npm run build
 # 提交main主分支
 git add .
 git commit -m "提交更新main主分支"
-git push origin main
+git push
 
 # 部署
 npm run deploy
