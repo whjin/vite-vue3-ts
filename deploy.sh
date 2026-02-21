@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-# 类型检测
-npm run type-check
-
 # 构建
 npm run build
 

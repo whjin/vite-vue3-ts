@@ -9,7 +9,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
-    base: mode === 'production' ? '/vue3-typescript/' : './',
+    base: mode === 'production' ? '/vite-vue3-ts/' : './',
     plugins: [
       vue(),
       AutoImport({ resolvers: [ElementPlusResolver()] }),
