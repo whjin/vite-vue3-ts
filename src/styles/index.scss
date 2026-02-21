@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'UniDreamLED';
+  src: url('/font/UniDreamLED.ttf') format('truetype');
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  #app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+}
+
+body {
+  position: relative;
+  height: 1080px;
+  width: 1920px;
+}

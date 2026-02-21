@@ -7,8 +7,20 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Message: typeof import('./src/components/Message.vue')['default']
+    AgeDistribution: typeof import('./src/components/leftPanel/AgeDistribution.vue')['default']
+    CEcharts: typeof import('./src/components/common/CEcharts.vue')['default']
+    CFooter: typeof import('./src/components/CFooter.vue')['default']
+    CHeader: typeof import('./src/components/CHeader.vue')['default']
+    CMap: typeof import('./src/components/CMap.vue')['default']
+    CPanel: typeof import('./src/components/common/CPanel.vue')['default']
+    IndustryRevenue: typeof import('./src/components/rightPanel/IndustryRevenue.vue')['default']
+    LeftPanel: typeof import('./src/components/LeftPanel.vue')['default']
+    RankingOfScenicSpots: typeof import('./src/components/leftPanel/RankingOfScenicSpots.vue')['default']
+    RealTimeHotWords: typeof import('./src/components/rightPanel/RealTimeHotWords.vue')['default']
+    ReceptionOfTourists: typeof import('./src/components/leftPanel/ReceptionOfTourists.vue')['default']
+    RightPanel: typeof import('./src/components/RightPanel.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Top5Tourists: typeof import('./src/components/rightPanel/Top5Tourists.vue')['default']
   }
 }

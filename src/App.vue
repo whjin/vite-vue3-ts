@@ -1,80 +1,38 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <main class="container">
+    <CHeader />
+    <CMap />
+    <LeftPanel />
+    <RightPanel />
+    <CFooter />
+  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script setup name="index">
+import { onMounted } from 'vue'
+import CHeader from '@/components/CHeader.vue'
+import CMap from '@/components/CMap.vue'
+import LeftPanel from '@/components/LeftPanel.vue'
+import RightPanel from '@/components/RightPanel.vue'
+import CFooter from '@/components/CFooter.vue'
+import autofit from 'autofit.js'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+onMounted(() => {
+  autofit.init({
+    el: 'body',
+    dw: 1920,
+    dh: 1080,
+    resize: true,
+  })
+})
+</script>
 
-nav {
+<style lang="scss" scoped>
+.container {
+  position: relative;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+  height: 100%;
+  background: url('@/assets/images/背景.png') no-repeat center center;
+  background-size: 100% 100%;
 }
 </style>
