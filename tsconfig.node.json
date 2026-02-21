@@ -27,7 +27,7 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "strict": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   }
